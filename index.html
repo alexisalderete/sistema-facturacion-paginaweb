@@ -1327,6 +1327,47 @@
       }
 
       .browser-wrap {
+        margin-top: 40px;
+      }
+
+      .dashboard-preview {
+        grid-template-columns: 56px 1fr;
+      }
+
+      .dash-sidebar-logo span {
+        display: none;
+      }
+
+      .dash-sidebar-logo {
+        justify-content: center;
+        padding: 4px 0 16px;
+      }
+
+      .dash-nav-item span.dash-nav-label {
+        display: none;
+      }
+
+      .dash-nav-item {
+        justify-content: center;
+        padding: 8px 6px;
+      }
+
+      .browser-url {
+        margin: 0 20px;
+      }
+
+      .dash-table-row {
+        grid-template-columns: 1fr 1fr;
+        font-size: 10px;
+      }
+
+      .dash-table-row span:nth-child(3),
+      .dash-table-row span:nth-child(4) {
+        display: none;
+      }
+
+      .dash-table-row.header span:nth-child(3),
+      .dash-table-row.header span:nth-child(4) {
         display: none;
       }
 
@@ -1593,15 +1634,15 @@
     <section class="hero" aria-labelledby="hero-heading">
       <div class="container">
         <div class="hero-eyebrow">
-          <span class="badge" style="background:#ffead5;color:#b54708;margin-bottom:12px;padding:6px 16px;font-size:14px">
+          <!-- <span class="badge" style="background:#ffead5;color:#b54708;margin-bottom:12px;padding:6px 16px;font-size:14px">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
               <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
               <line x1="12" y1="9" x2="12" y2="13"/>
               <line x1="12" y1="17" x2="12.01" y2="17"/>
             </svg>
             Obligatoriedad Grupos 19 al 24 - Desde Junio 2026
-          </span>
-          <br/>
+          </span> -->
+          <!-- <br /> -->
           <span class="badge">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <circle cx="12" cy="12" r="10" />
@@ -1689,7 +1730,7 @@
                       <polyline points="14 2 14 8 20 8" />
                     </svg>
                   </div>
-                  Factucloud
+                  <span class="dash-nav-label">Factucloud</span>
                 </div>
                 <div class="dash-nav-item active" data-view="dashboard" onclick="switchView('dashboard')"
                   style="cursor:pointer">
@@ -1699,21 +1740,38 @@
                     <rect x="14" y="3" width="7" height="7" />
                     <rect x="3" y="14" width="7" height="7" />
                     <rect x="14" y="14" width="7" height="7" />
-                  </svg> Dashboard
+                  </svg><span class="dash-nav-label"> Dashboard</span>
                 </div>
                 <div class="dash-nav-item" data-view="facturas" onclick="switchView('facturas')" style="cursor:pointer">
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                     style="flex-shrink:0">
                     <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
                     <polyline points="14 2 14 8 20 8" />
-                  </svg> Facturas
+                    <line x1="12" y1="18" x2="12" y2="12" />
+                    <line x1="9" y1="15" x2="15" y2="15" />
+                  </svg><span class="dash-nav-label"> Nuevo DE</span>
                 </div>
-                <div class="dash-nav-item" data-view="clientes" onclick="switchView('clientes')" style="cursor:pointer">
+                <div class="dash-nav-item" data-view="nre" onclick="switchView('nre')" style="cursor:pointer">
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                     style="flex-shrink:0">
-                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-                    <circle cx="9" cy="7" r="4" />
-                  </svg> Clientes
+                    <path
+                      d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                  </svg><span class="dash-nav-label"> Nuevo NRE</span>
+                </div>
+                <div class="dash-nav-item" data-view="eventos" onclick="switchView('eventos')" style="cursor:pointer">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    style="flex-shrink:0">
+                    <rect x="1" y="4" width="22" height="16" rx="2" />
+                    <line x1="1" y1="10" x2="23" y2="10" />
+                  </svg><span class="dash-nav-label"> Eventos</span>
+                </div>
+                <div class="dash-nav-item" data-view="ventas" onclick="switchView('ventas')" style="cursor:pointer">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    style="flex-shrink:0">
+                    <circle cx="9" cy="21" r="1" />
+                    <circle cx="20" cy="21" r="1" />
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+                  </svg><span class="dash-nav-label"> Ventas</span>
                 </div>
                 <div class="dash-nav-item" data-view="productos" onclick="switchView('productos')"
                   style="cursor:pointer">
@@ -1721,15 +1779,25 @@
                     style="flex-shrink:0">
                     <path
                       d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
-                  </svg> Productos
+                    <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+                    <line x1="12" y1="22.08" x2="12" y2="12" />
+                  </svg><span class="dash-nav-label"> Inventario</span>
+                </div>
+                <div class="dash-nav-item" data-view="clientes" onclick="switchView('clientes')" style="cursor:pointer">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    style="flex-shrink:0">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                    <circle cx="9" cy="7" r="4" />
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                  </svg><span class="dash-nav-label"> Personas</span>
                 </div>
                 <div class="dash-nav-item" data-view="reportes" onclick="switchView('reportes')" style="cursor:pointer">
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                     style="flex-shrink:0">
-                    <line x1="18" y1="20" x2="18" y2="10" />
-                    <line x1="12" y1="20" x2="12" y2="4" />
-                    <line x1="6" y1="20" x2="6" y2="14" />
-                  </svg> Reportes
+                    <rect x="2" y="7" width="20" height="14" rx="2" />
+                    <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
+                  </svg><span class="dash-nav-label"> Empleados</span>
                 </div>
                 <div class="dash-nav-item" data-view="config" onclick="switchView('config')" style="cursor:pointer">
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -1737,7 +1805,7 @@
                     <circle cx="12" cy="12" r="3" />
                     <path
                       d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
-                  </svg> Configuración
+                  </svg><span class="dash-nav-label"> Configuración</span>
                 </div>
               </div>
               <div class="dash-main" id="dash-main-area">
@@ -1956,11 +2024,94 @@
                     </div>
                   </div>
                 </div>
+                <!-- VIEW: NRE -->
+                <div id="view-nre" style="display:none">
+                  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+                    <span style="font-size:13px;font-weight:700;color:var(--text-1)">Nueva Nota de Remisión</span>
+                    <span class="pill pill-blue" style="font-size:10px">NRE</span>
+                  </div>
+                  <div style="display:flex;flex-direction:column;gap:6px">
+                    <div
+                      style="background:var(--bg-2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:8px 10px">
+                      <div style="font-size:10px;color:var(--text-3);margin-bottom:3px">Destinatario</div>
+                      <div style="font-size:11px;color:var(--text-1);font-weight:600">Empresa ABC S.A. · RUC 80001234-5
+                      </div>
+                    </div>
+                    <div
+                      style="background:var(--bg-2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:8px 10px">
+                      <div style="font-size:10px;color:var(--text-3);margin-bottom:3px">Dirección de entrega</div>
+                      <div style="font-size:11px;color:var(--text-1)">Av. España 123, Asunción</div>
+                    </div>
+                    <div class="dash-table-row header">
+                      <span>Ítem</span><span>Cant.</span><span>Precio</span><span>Total</span>
+                    </div>
+                    <div class="dash-table-row"><span style="color:var(--text-1)">Mercadería
+                        general</span><span>10</span><span>₲ 50.000</span><span style="font-weight:600">₲ 500.000</span>
+                    </div>
+                    <span class="pill pill-blue"
+                      style="font-size:10px;padding:5px 12px;width:fit-content;cursor:pointer;margin-top:4px">+ Agregar
+                      ítem</span>
+                  </div>
+                </div>
+                <!-- VIEW: EVENTOS -->
+                <div id="view-eventos" style="display:none">
+                  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+                    <span style="font-size:13px;font-weight:700;color:var(--text-1)">Eventos SIFEN</span>
+                    <span style="font-size:10px;color:var(--text-3)">Últimos 30 días</span>
+                  </div>
+                  <div class="dash-table-row header">
+                    <span>CDC</span><span>Tipo</span><span>Fecha</span><span>Estado</span>
+                  </div>
+                  <div class="dash-table-row"><span
+                      style="color:var(--brand);font-weight:600;font-size:9px">01800…123</span><span
+                      style="color:var(--text-3)">Cancelación</span><span
+                      style="color:var(--text-3)">06/06/26</span><span class="pill pill-green">Aprobado</span></div>
+                  <div class="dash-table-row"><span
+                      style="color:var(--brand);font-weight:600;font-size:9px">01800…122</span><span
+                      style="color:var(--text-3)">Inutilización</span><span
+                      style="color:var(--text-3)">05/06/26</span><span class="pill pill-green">Aprobado</span></div>
+                  <div class="dash-table-row"><span
+                      style="color:var(--brand);font-weight:600;font-size:9px">01800…121</span><span
+                      style="color:var(--text-3)">Conformidad</span><span
+                      style="color:var(--text-3)">04/06/26</span><span class="pill pill-blue">Pendiente</span></div>
+                </div>
+                <!-- VIEW: VENTAS -->
+                <div id="view-ventas" style="display:none">
+                  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+                    <span style="font-size:13px;font-weight:700;color:var(--text-1)">Resumen de ventas</span>
+                    <span class="pill pill-green" style="font-size:10px">Junio 2026</span>
+                  </div>
+                  <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px">
+                    <div class="dash-stat">
+                      <div class="dash-stat-label">Ventas totales</div>
+                      <div class="dash-stat-val blue">847</div>
+                    </div>
+                    <div class="dash-stat">
+                      <div class="dash-stat-label">Monto total</div>
+                      <div class="dash-stat-val">₲ 312M</div>
+                    </div>
+                    <div class="dash-stat">
+                      <div class="dash-stat-label">Ticket promedio</div>
+                      <div class="dash-stat-val">₲ 368K</div>
+                    </div>
+                    <div class="dash-stat">
+                      <div class="dash-stat-label">Aprobados DNIT</div>
+                      <div class="dash-stat-val green">99.8%</div>
+                    </div>
+                  </div>
+                  <div class="dash-table-row header">
+                    <span>Producto</span><span>Cant.</span><span>Total</span><span>IVA</span>
+                  </div>
+                  <div class="dash-table-row"><span style="color:var(--text-1)">Servicio
+                      consultoría</span><span>42</span><span>₲ 21M</span><span class="pill pill-blue">10%</span></div>
+                  <div class="dash-table-row"><span style="color:var(--text-1)">Productos
+                      importados</span><span>310</span><span style="font-weight:600">₲ 26M</span><span
+                      class="pill pill-blue">10%</span></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
     </section>
 
     <!-- ===== LOGOS ===== -->
@@ -2612,12 +2763,13 @@
             </ul>
           </nav>
 
-          <nav class="footer-col" aria-label="Empresa">
+          <!-- comentado de momento -->
+          <!-- <nav class="footer-col" aria-label="Empresa">
             <h5>Empresa</h5>
             <ul>
-              <li><a href="/nosotros">Nosotros</a></li>
-              <li><a href="/blog">Blog</a></li>
-              <li><a href="/contacto">Contacto</a></li>
+              <li><a href="https://wa.me/595971459288?text=Hola%2C%20quisiera%20conocer%20m%C3%A1s%20sobre%20Factucloud" target="_blank" rel="noopener">Nosotros</a></li>
+              <li><a href="https://wa.me/595971459288?text=Hola%2C%20tengo%20una%20consulta%20sobre%20Factucloud" target="_blank" rel="noopener">Blog</a></li>
+              <li><a href="https://wa.me/595971459288?text=Hola%2C%20quisiera%20contactarme%20con%20Factucloud" target="_blank" rel="noopener">Contacto</a></li>
               <li><a href="mailto:ventas@factucloud.com.py">Ventas</a></li>
             </ul>
           </nav>
@@ -2625,18 +2777,16 @@
           <nav class="footer-col" aria-label="Legal y soporte">
             <h5>Legal</h5>
             <ul>
-              <li><a href="/terminos">Términos de uso</a></li>
-              <li><a href="/privacidad">Política de privacidad</a></li>
-              <li><a href="/faq">FAQ</a></li>
+              <li><a href="https://wa.me/595971459288?text=Hola%2C%20quisiera%20ver%20los%20t%C3%A9rminos%20de%20uso%20de%20Factucloud" target="_blank" rel="noopener">Términos de uso</a></li>
+              <li><a href="https://wa.me/595971459288?text=Hola%2C%20quisiera%20ver%20la%20pol%C3%ADtica%20de%20privacidad%20de%20Factucloud" target="_blank" rel="noopener">Política de privacidad</a></li>
+              <li><a href="#faq">FAQ</a></li>
               <li><a href="mailto:soporte@factucloud.com.py">Soporte</a></li>
             </ul>
-          </nav>
+          </nav> -->
         </div>
 
         <div class="footer-bottom">
           <p>© 2026 Factucloud. Todos los derechos reservados. · Paraguay</p>
-          <p style="color:var(--text-3);font-size:12px">factucloud.com.py · RUC: <span
-              aria-label="RUC de Factucloud">00000000-0</span></p>
         </div>
       </div>
     </footer>
@@ -2748,7 +2898,7 @@
 
     // ===== DASHBOARD VIEW SWITCHER =====
     function switchView(view) {
-      const views = ['dashboard', 'facturas', 'clientes', 'productos', 'reportes', 'config'];
+      const views = ['dashboard', 'facturas', 'clientes', 'productos', 'reportes', 'config', 'nre', 'eventos', 'ventas'];
       views.forEach(v => {
         const el = document.getElementById('view-' + v);
         if (el) el.style.display = v === view ? 'block' : 'none';
