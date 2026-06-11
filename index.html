@@ -1080,6 +1080,74 @@
       padding-bottom: 18px;
     }
 
+    /* ===== TABLA COMPARATIVA ===== */
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      min-width: 700px;
+    }
+
+    .compare-table th,
+    .compare-table td {
+      padding: 10px 12px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+      white-space: nowrap;
+    }
+
+    .compare-table th {
+      background: var(--bg-2);
+      font-weight: 700;
+      color: var(--text-1);
+      position: sticky;
+      top: 0;
+    }
+
+    .compare-table td:first-child,
+    .compare-table th:first-child {
+      text-align: left;
+      font-weight: 500;
+      color: var(--text-1);
+      white-space: normal;
+      min-width: 200px;
+    }
+
+    .compare-table .col-popular {
+      background: var(--brand);
+      color: #fff;
+    }
+
+    .compare-table .cat-header {
+      background: var(--bg-3);
+      font-weight: 700;
+      color: var(--text-1);
+      text-align: left;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+    }
+
+    .compare-table tbody tr:hover {
+      background: var(--brand-25);
+    }
+
+    .table-wrapper {
+      margin-top: 40px;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      background: var(--surface);
+    }
+
+    .table-wrapper::-webkit-scrollbar {
+      height: 6px;
+    }
+
+    .table-wrapper::-webkit-scrollbar-thumb {
+      background: var(--border);
+      border-radius: 3px;
+    }
+
     /* ===== CTA BANNER ===== */
     .cta-banner {
       background: var(--brand);
@@ -2161,7 +2229,7 @@
               </svg>
             </div>
             <h3>KuDE automático</h3>
-            <p>Generamos automáticamente el Kude (representación gráfica del DE) en PDF A4 y 80mm para impresoras
+            <p>Generamos automáticamente el Kude (representación gráfica del DE) en PDF A4, 80mm y 58mm para impresoras
               térmicas.</p>
           </article>
           <article class="feature-card reveal">
@@ -2196,7 +2264,7 @@
               </svg>
             </div>
             <h3>Reportes y estadísticas</h3>
-            <p>Visualizá tus ventas por período, cliente y producto. Exportá a Excel para tu contador o declaraciones.
+            <p>Visualizá tus ventas por período, cliente y producto. Exportá a Excel y PDF.
             </p>
           </article>
           <article class="feature-card reveal">
@@ -2378,9 +2446,9 @@
                 </svg> Soporte prioritario</div>
             </div>
             <div class="price-extras">
-              <div class="price-extra">+400 Gs por documento extra/mes</div>
-              <div class="price-extra">+20.000 Gs por usuario extra/mes</div>
-              <div class="price-extra">+20.000 Gs por establecimiento extra/mes</div>
+              <div class="price-extra">+400 Gs/mes por documento extra</div>
+              <div class="price-extra">+20.000 Gs/mes por usuario extra</div>
+              <div class="price-extra">+20.000 Gs/mes por establecimiento extra</div>
             </div>
             <a href="https://wa.me/595971459288?text=Hola%2C+me+interesa+el+Plan+Avanzado+de+Factucloud+%28%E2%82%B2+200.000%2Fmes%29.+Quisiera+m%C3%A1s+informaci%C3%B3n."
               class="btn btn-primary" style="width:100%;justify-content:center;margin-top:16px">Empezar</a>
@@ -2415,9 +2483,9 @@
                 </svg> Soporte prioritario</div>
             </div>
             <div class="price-extras">
-              <div class="price-extra">+300 Gs por documento extra/mes</div>
-              <div class="price-extra">+20.000 Gs por usuario extra/mes</div>
-              <div class="price-extra">+20.000 Gs por establecimiento extra/mes</div>
+              <div class="price-extra">+300 Gs/mes por documento extra</div>
+              <div class="price-extra">+20.000 Gs/mes por usuario extra</div>
+              <div class="price-extra">+20.000 Gs/mes por establecimiento extra</div>
             </div>
             <a href="https://wa.me/595971459288?text=Hola%2C+me+interesa+el+Plan+Premium+de+Factucloud+%28%E2%82%B2+300.000%2Fmes%29.+Quisiera+m%C3%A1s+informaci%C3%B3n."
               class="btn btn-primary" style="width:100%;justify-content:center;margin-top:16px">Empezar</a>
@@ -2451,9 +2519,9 @@
                 </svg> Soporte y atención personalizada</div>
             </div>
             <div class="price-extras">
-              <div class="price-extra">+200 Gs por documento extra/mes</div>
-              <div class="price-extra">+20.000 Gs por usuario extra/mes</div>
-              <div class="price-extra">+20.000 Gs por establecimiento extra/mes</div>
+              <div class="price-extra">+200 Gs/mes por documento extra</div>
+              <div class="price-extra">+20.000 Gs/mes por usuario extra</div>
+              <div class="price-extra">+20.000 Gs/mes por establecimiento extra</div>
             </div>
             <a href="https://wa.me/595971459288?text=Hola%2C+me+interesa+el+Plan+Enterprise+de+Factucloud+%28%E2%82%B2+500.000%2Fmes%29.+Quisiera+m%C3%A1s+informaci%C3%B3n."
               class="btn btn-primary" style="width:100%;justify-content:center;margin-top:16px">Empezar</a>
@@ -2487,9 +2555,9 @@
                 </svg> Soporte y atención personalizada</div>
             </div>
             <div class="price-extras">
-              <div class="price-extra">+150 Gs por documento extra/mes</div>
-              <div class="price-extra">+20.000 Gs por usuario extra/mes</div>
-              <div class="price-extra">+20.000 Gs por establecimiento extra/mes</div>
+              <div class="price-extra">+150 Gs/mes por documento extra</div>
+              <div class="price-extra">+20.000 Gs/mes por usuario extra</div>
+              <div class="price-extra">+20.000 Gs/mes por establecimiento extra</div>
             </div>
             <a href="https://wa.me/595971459288?text=Hola%2C+me+interesa+el+Plan+Corporativo+de+Factucloud+%28%E2%82%B2+700.000%2Fmes%29.+Quisiera+m%C3%A1s+informaci%C3%B3n."
               class="btn btn-primary" style="width:100%;justify-content:center;margin-top:16px">Empezar</a>
@@ -2527,6 +2595,456 @@
               style="width:100%;justify-content:center;margin-top:16px;border-color:#12b76a;color:#12b76a;">Contactar
               ventas</a>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TABLA COMPARATIVA ===== -->
+    <section class="section" id="comparativa" style="padding-top:0;">
+      <div class="container">
+        <div class="features-header reveal">
+          <h2 class="section-title">Comparativa de planes</h2>
+        </div>
+        <div class="table-wrapper reveal" style="overflow-x:auto;">
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th>Características</th>
+                <th>Básico</th>
+                <th>Avanzado</th>
+                <th class="col-popular">Premium</th>
+                <th>Enterprise</th>
+                <th>Corporativo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="cat-header" colspan="6">Precio</td>
+              </tr>
+              <tr>
+                <td>Precio mensual</td>
+                <td>₲ 100.000</td>
+                <td>₲ 200.000</td>
+                <td>₲ 300.000</td>
+                <td>₲ 500.000</td>
+                <td>₲ 700.000</td>
+              </tr>
+
+              <tr>
+                <td class="cat-header" colspan="6">Volumen y Accesos</td>
+              </tr>
+              <tr>
+                <td>Documentos electrónicos / mes</td>
+                <td>200</td>
+                <td>500</td>
+                <td>1.000</td>
+                <td>3.000</td>
+                <td>5.000</td>
+              </tr>
+              <tr>
+                <td>Costo por documento extra</td>
+                <td>+ 500 Gs</td>
+                <td>+ 400 Gs</td>
+                <td>+ 300 Gs</td>
+                <td>+ 200 Gs</td>
+                <td>+ 150 Gs</td>
+              </tr>
+              <tr>
+                <td>Usuarios incluidos</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>5</td>
+                <td>8</td>
+              </tr>
+              <tr>
+                <td>Establecimientos (Sucursales)</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+              </tr>
+
+              <tr>
+                <td class="cat-header" colspan="6">Integración SIFEN (e-Kuatia)</td>
+              </tr>
+              <tr>
+                <td>Emisión de Facturas, NC, ND, Remisión</td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+              </tr>
+              <tr>
+                <td>Emisión de Autofacturas</td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f04438" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                  </svg></td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+              </tr>
+              <tr>
+                <td>Envío asíncrono DNIT</td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+              </tr>
+              <tr>
+                <td>Manejo de Eventos (Cancelación e inutilización)</td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+              </tr>
+              <tr>
+                <td>Generación de CDC (Código de Control)</td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+              </tr>
+
+              <tr>
+                <td class="cat-header" colspan="6">Documentos y Generación KuDE</td>
+              </tr>
+              <tr>
+                <td>Generación de KuDE en PDF (A4)</td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+              </tr>
+              <tr>
+                <td>Generación de KuDE Térmico (80mm y 58mm)</td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+              </tr>
+              <tr>
+                <td>Envío automático por Email al cliente</td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+              </tr>
+              <tr>
+                <td>Aplicación móvil para impresión en formato ticket</td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+              </tr>
+
+              <tr>
+                <td class="cat-header" colspan="6">Gestión Comercial</td>
+              </tr>
+              <tr>
+                <td>Catálogo de Clientes (RUC / Cédula)</td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+              </tr>
+              <tr>
+                <td>Catálogo de Productos y Servicios</td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+              </tr>
+              <tr>
+                <td>Control de Inventario básico</td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+              </tr>
+              <tr>
+                <td>Importación masiva (Excel/CSV)</td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+              </tr>
+              <tr>
+                <td>Reportes de IVA y Ventas</td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+              </tr>
+
+              <tr>
+                <td class="cat-header" colspan="6">Soporte y Seguridad</td>
+              </tr>
+              <tr>
+                <td>Backups diarios en la nube</td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+                <td><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12b76a" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></td>
+              </tr>
+              <tr>
+                <td>Tipo de Soporte</td>
+                <td>Horario Laboral</td>
+                <td>Prioritario</td>
+                <td>Prioritario</td>
+                <td>Personalizado</td>
+                <td>Personalizado y 24/7</td>
+              </tr>
+              <tr>
+                <td>Capacitación presencial</td>
+                <td>1 Sesión</td>
+                <td>1 Sesión</td>
+                <td>1 Sesión</td>
+                <td>1 Sesión</td>
+                <td>2 Sesiones</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </section>
